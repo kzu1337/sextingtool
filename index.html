@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>😈 Sexting Tool by Florin 😈</title>
+    <style>
+        /* Font import */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lora:wght@400;700&display=swap');
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #6f42c1; /* Mov închis */
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a2d81; /* Mov foarte închis */
+        }
+
+        body {
+            background: linear-gradient(to bottom, #000000, #2e003e); /* Negru și mov închis */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            overflow-x: hidden;
+            color: #f8f9fa; /* Alb-gri */
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin: 20px;
+        }
+
+        .button-container button {
+            font-size: 18px;
+            padding: 10px 20px;
+            background: linear-gradient(to bottom, #d63384, #b82e6e); /* Roz deschis și roz mai închis */
+            border: 2px solid #b82e6e; /* Roz închis */
+            border-radius: 20px;
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.1s ease, background-color 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .button-container button:active {
+            transform: scale(0.95);
+        }
+
+        .button-container button:hover {
+            background-color: #b82e6e; /* Roz închis */
+        }
+
+        .output-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .output-box,
+        .support-output-box {
+            border: 2px solid #d63384; /* Roz deschis */
+            border-radius: 12px;
+            padding: 12px;
+            background-color: rgba(0, 0, 0, 0.2); /* Negru transparent */
+            overflow-y: scroll;
+            width: 320px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'Lora', serif;
+        }
+
+        .output-box {
+            height: 260px;
+        }
+
+        .support-output-box {
+            height: 120px;
+        }
+
+        .copy-button {
+            margin-top: 12px;
+            padding: 4px 10px;
+            font-size: 14px;
+            background: linear-gradient(to bottom, #d63384, #b82e6e); /* Roz deschis și roz închis */
+            border: 1px solid #b82e6e; /* Roz închis */
+            color: #fff;
+            border-radius: 12px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .copy-button:hover {
+            background-color: #b82e6e; /* Roz închis */
+        }
+
+        .copy-confirmation {
+            position: absolute;
+            background-color: rgba(255, 105, 180, 0.9); /* Roz pastel */
+            color: black;
+            padding: 12px;
+            border-radius: 50%;
+            z-index: 1000;
+            border: 2px solid #ff69b4; /* Roz strălucitor */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 42px;
+            color: #f8f9fa; /* Alb-gri */
+            font-weight: 700;
+            font-family: 'Lora', serif;
+        }
+
+        .section {
+            background-color: rgba(0, 0, 0, 0.3); /* Negru transparent */
+            border: 2px solid #d63384; /* Roz deschis */
+            border-radius: 12px;
+            padding: 12px;
+            margin-top: 10px;
+            font-family: 'Lora', serif;
+        }
+
+        .section h2 {
+            font-size: 24px;
+        }
+
+        input[type="text"] {
+            width: 180px;
+            padding: 12px;
+            margin-top: 10px;
+            border: 2px solid #d63384; /* Roz deschis */
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.1); /* Alb transparent */
+            color: #f8f9fa; /* Alb-gri */
+            font-family: 'Poppins', sans-serif;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            background: linear-gradient(to bottom, #d63384, #b82e6e); /* Roz deschis și roz închis */
+            border: 2px solid #b82e6e; /* Roz închis */
+            border-radius: 20px;
+            color: black;
+            cursor: pointer;
+            transition: transform 0.1s ease, background-color 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #f8f9fa; /* Alb-gri */
+            font-family: 'Lora', serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>😈 Sexting Tool by Florin 😈</h1>
+        </header>
+        <!-- Sexting B Section -->
+        <div class="section" id="sexting-b-section">
+            <h2>😈 Blowjob 😈</h2>
+            <input type="text" id="fan-name-sexting-b" placeholder="Enter fan's name">
+            <button id="sexting-b-button">Generate</button>
+            <p id="sexting-b-message"></p>
+            <!-- Add a Copy button -->
+            <button id="copy-sexting-b" class="copy-button">Copy</button>
+        </div>
+
+        <!-- Sexting P Section -->
+        <div class="section" id="sexting-p-section">
+            <h2>😈 Pussy 😈</h2>
+            <input type="text" id="fan-name-sexting-p" placeholder="Enter fan's name">
+            <button id="sexting-p-button">Generate</button>
+            <p id="sexting-p-message"></p>
+            <!-- Add a Copy button -->
+            <button id="copy-sexting-p" class="copy-button">Copy</button>
+        </div>
+
+        <!-- Sexting A Section -->
+        <div class="section" id="sexting-a-section">
+            <h2>😈 Ass 😈</h2>
+            <input type="text" id="fan-name-sexting-a" placeholder="Enter fan's name">
+            <button id="sexting-a-button">Generate</button>
+            <p id="sexting-a-message"></p>
+            <!-- Add a Copy button -->
+            <button id="copy-sexting-a" class="copy-button">Copy</button>
+        </div>
+
+        <!-- Sexting C Section -->
+        <div class="section" id="sexting-c-section">
+            <h2>😈 Cum 😈</h2>
+            <input type="text" id="fan-name-sexting-c" placeholder="Enter fan's name">
+            <select id="sexting-c-dropdown">
+                <option value="1">Facial</option>
+                <option value="2">Mouth/Throat</option>
+                <option value="3">Tits</option>
+                <option value="4">Ass/Creampie-Ass</option>
+                <option value="5">Pussy/Creampie-Pussy</option>
+            </select>
+            <button id="sexting-c-button">Generate</button>
+            <p id="sexting-c-message"></p>
+            <!-- Add a Copy button -->
+            <button id="copy-sexting-c" class="copy-button">Copy</button>
+        </div>
+    </div>
+
+    <script>
+        let messages = {};
+
+        fetch('messages.txt')
+            .then(response => response.text())
+            .then(text => {
+                let lines = text.split('\n');
+                        let currentSection = '';
+        lines.forEach(line => {
+            line = line.trim();
+            if (line.startsWith('Sexting -')) {
+                currentSection = line.split(' ')[2].toLowerCase();
+                if (!messages[currentSection]) messages[currentSection] = [];
+            } else if (line) {
+                messages[currentSection].push(line);
+            }
+        });
+        console.log('Messages loaded:', messages); // Log the loaded messages for debugging
+    })
+    .catch(error => console.error('Error loading messages:', error));
+
+function getRandomMessage(section) {
+    let sectionMessages = messages[section];
+    if (sectionMessages && sectionMessages.length > 0) {
+        return sectionMessages[Math.floor(Math.random() * sectionMessages.length)];
+    }
+    return 'No messages available for section: ' + section;
+}
+
+document.getElementById('sexting-b-button').addEventListener('click', () => {
+    const fanName = document.getElementById('fan-name-sexting-b').value;
+    const message = getRandomMessage('blowjob').replace('{name}', fanName);
+    document.getElementById('sexting-b-message').innerText = message;
+});
+
+document.getElementById('sexting-p-button').addEventListener('click', () => {
+    const fanName = document.getElementById('fan-name-sexting-p').value;
+    const message = getRandomMessage('pussy').replace('{name}', fanName);
+    document.getElementById('sexting-p-message').innerText = message;
+});
+
+document.getElementById('sexting-a-button').addEventListener('click', () => {
+    const fanName = document.getElementById('fan-name-sexting-a').value;
+    const message = getRandomMessage('ass').replace('{name}', fanName);
+    document.getElementById('sexting-a-message').innerText = message;
+});
+
+document.getElementById('sexting-c-button').addEventListener('click', () => {
+    const fanName = document.getElementById('fan-name-sexting-c').value;
+    const option = document.getElementById('sexting-c-dropdown').value;
+    let section = '';
+    switch (option) {
+        case '1':
+            section = 'facial';
+            break;
+        case '2':
+            section = 'mouth';
+            break;
+        case '3':
+            section = 'tits';
+            break;
+        case '4':
+            section = 'ass';
+            break;
+        case '5':
+            section = 'pussy';
+            break;
+    }
+    const message = getRandomMessage(section).replace('{name}', fanName);
+    document.getElementById('sexting-c-message').innerText = message;
+});
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert('Text copied to clipboard');
+    }).catch(err => {
+        console.error('Failed to copy text: ', err);
+    });
+}
+
+document.getElementById('copy-sexting-b').addEventListener('click', () => {
+    const text = document.getElementById('sexting-b-message').innerText;
+    copyToClipboard(text);
+});
+
+document.getElementById('copy-sexting-p').addEventListener('click', () => {
+    const text = document.getElementById('sexting-p-message').innerText;
+    copyToClipboard(text);
+});
+
+document.getElementById('copy-sexting-a').addEventListener('click', () => {
+    const text = document.getElementById('sexting-a-message').innerText;
+    copyToClipboard(text);
+});
+
+document.getElementById('copy-sexting-c').addEventListener('click', () => {
+    const text = document.getElementById('sexting-c-message').innerText;
+    copyToClipboard(text);
+});
+    </script>
+</body>
+
+</html>
+
